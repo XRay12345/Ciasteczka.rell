@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/main.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+
+</head>
+<body onload="zaladowanie()">
+    <div class="321312">
+    <div id="ciasteczka">
+        <h2>Cookie Notification</h2>
+      <p>We use cookies on this site 
+        and similar technologies, 
+        that help us learn 
+        about you and how you use our site, 
+        how you use our site.</p>
+          <button onclick="zaakceptowaie()">Accept</button>  
+    </div>
+
+</div>
+<script>
+    function zaakceptowaie() {
+        var ciasteczka = document.getElementById("ciasteczka");
+        ciasteczka.style.display = "none"
+        document.cookie = "Zaakceptowane";
+    }
+    function zaladowanie() {
+        if(document.cookie) {
+        ciasteczka.style.display = "none"
+        }
+    }
+</script>
+</body>
+</html>
